@@ -1,4 +1,38 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://khaverfarm.github.io'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Khaver Farm'
 theme = 'hugo-flex'
+
+[params]
+color = "teal"
+width = "42rem"
+divider = "\\a0"
+footer = 'Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.'
+favicon = false
+noClasses = true
+katex = "0.16.9"
+headingoffset = 0
+linkicons = false
+summaries = false
+schema = false
+opengraph = false
+twittercards = false
+
+  [params.utterances]
+
+  [params.netlify]
+  honeypot = false
+  recaptcha = false
+
+[[menu.main]]
+name = "About"
+pageRef = "/about"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+pageRef = "/posts"
+weight = 2
+
+[mediaTypes."font/woff2"]
+suffixes = [ "woff2" ]
