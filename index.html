@@ -6,20 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Khaver Farm</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./js/components.js"></script>
   </head>
   <body>
-    <div class="flex navbar" style="margin: 1px solid yellow";>
-        <div class="flex" style="flex-grow: 1; justify-content: space-evenly; align-items: center;">
-            <div class="flex" style="flex-grow: 6; font-size: 50px">
-                Khaver Farm
-            </div>
-            <div class="flex" style="flex-grow: 1; font-size: 25px;">
-                <a href="./posts.html">
-                    Posts
-                </a>
-            </div>
-        </div>
-    </div>
+    <main-header />
     <div class="flex home" style="flex-direction: column; align-items: stretch">
         <div class="popquote">
             <div>
@@ -45,8 +35,9 @@
                     We will be offering organically and kosherly raised poultry and lamb for high-holiday preorder starting soon!             
                 </p>
             </div>
-            <img class="welcomeimage" src="./images/farmers.jpg" />
+            <img class="welcomeimage" src="./assets/images/farmers.jpg" />
         </div>
+        <main-footer />
     </div>
   </body>
 </html>

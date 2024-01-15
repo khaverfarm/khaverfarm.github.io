@@ -23,7 +23,7 @@
 	src: url('./fonts/cmunci.ttf') format('truetype');
 }
 
-.body {
+body {
 	margin: 0px;
 	padding: 0px;
 }
@@ -32,7 +32,7 @@
     display: flex;
   }
 
-.navbar {
+nav {
     background-color: maroon;
     color: white;
     padding: 30px;
@@ -52,6 +52,14 @@ a:hover{
 	padding: 150px;
 	text-align: center;
 	background-color: papayawhip;
+	font-size: 35px;
+	font-family: 'Computer Modern Classical Serif Bold Italic';
+}
+
+.posts {
+	padding: 150px;
+	text-align: center;
+	background-color: white;
 	font-size: 35px;
 	font-family: 'Computer Modern Classical Serif Bold Italic';
 }
@@ -80,4 +88,10 @@ a:hover{
 	.navbar {
 		color: green;
 	}
+}
+
+footer {
+	font-family: 'Computer Modern Classical Sans Serif Medium';
+	background-color: maroon;
+	color: white;
 }
