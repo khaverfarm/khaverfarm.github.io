@@ -1,13 +1,15 @@
-// most recent post first
-let posts = data.reverse()
+const posts = data.reverse()
+const imgDir = 'images/'
+const containsHebrew = /[\u0590-\u05FF]/
+const newLine = /\r?\n/
 
 async function populateSidebar() {
     try {
-        let result = ""
+        let sidebarHtml = ""
         posts.forEach(post => {
-            result += `<li onclick="populateFullPost(${post.id})">${post.title} - ${post.date}</li>`
+            sidebarHtml += `<li onclick="populateFullPost(${post.id})">${post.title} - ${post.date}</li>`
         })
-        document.getElementById("sidebar").innerHTML = result 
+        document.getElementById("sidebar").innerHTML = sidebarHtml
         
     } catch (error) {
         console.log(error)  
@@ -16,16 +18,10 @@ async function populateSidebar() {
 
 async function populateFullPost(id) {
     try {
-        let post
-        if (id == undefined) {
-            // render most recent post by default
-            post = posts[0]
-        } else {
-            // oldest post has id 1
-            post = posts[posts.length - id]
-        }
-        // set up post title html
-        let result = `
+        // render most recent post by default
+        let post = (id == undefined) ? posts[0] : posts[posts.length - id]  
+        // TITLE BLOCK
+        let postHtml = `
             <div>
                 <div class="flex post-title">
                     <h4>
@@ -35,18 +31,21 @@ async function populateFullPost(id) {
                         ${post.hebrewDate}
                     </h4>
                 </div>
-                <h1>${post.title}</h1>
+                <h2>${post.title}</h2>
             </div>
         `
-        post.content.forEach(paragraph => {
-            if (paragraph.includes('images/')) {
-                let html = `<img src=${paragraph} />`
-                result += html
+        // BODY CONTENT
+        post.content.split(newLine).forEach(snippet => {
+            if (snippet.includes(imgDir)) {
+                // render an image
+                postHtml += `<img src=${snippet} />`
             } else {
-                result += `<p>${paragraph}</p>`
+                // render text
+                let hebrewClass = (containsHebrew).test(snippet) ? "class='hebrew'" : ""
+                postHtml += `<p ${hebrewClass}>${snippet}</p>`
             }
         })
-        document.getElementById("post").innerHTML = result 
+        document.getElementById("post").innerHTML = postHtml 
     } catch (error) {
         console.log(error)  
     }

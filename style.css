@@ -116,10 +116,12 @@ li:hover{
 #sidebar {
 	flex-direction: column;
 	flex: 30%;
+	margin: 3%;
 	padding: 3%;
 	align-items: stretch;
 	font-family: 'Computer Modern Classical Sans Serif Medium';
 	font-size: 17px;
+	background-color: papayawhip;
 }
 
 #post {
@@ -133,6 +135,10 @@ li {
 	padding: 3%;
 }
 
+.postcontainer {
+	padding: 3%;
+}
+
 .post-title {
 	flex-direction: row;
 	justify-content: space-between;
@@ -141,4 +147,8 @@ li {
 .home {
 	flex-direction: column;
 	align-items: stretch;
+}
+
+.hebrew {
+	text-align: right;
 }
