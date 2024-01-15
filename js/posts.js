@@ -1,8 +1,8 @@
 async function populateSidebar() {
     try {
         let result = ""
-        posts.forEach(post => {
-            result += `<li onclick="populateFullPost(${post.id})">${post.title}</li>`
+        posts.reverse().forEach(post => {
+            result += `<li onclick="populateFullPost(${post.id})">${post.title} - ${post.date}</li>`
         })
         document.getElementById("sidebar").innerHTML = result 
         
