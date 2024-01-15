@@ -24,7 +24,20 @@ async function populateFullPost(id) {
             // oldest post has id 1
             post = posts[posts.length - id]
         }
-        let result = `<h1>${post.title}</h1><h2>${post.date}</h2><h2>${post.hebrewDate}</h2>`
+        // set up post title html
+        let result = `
+            <div>
+                <div class="flex post-title">
+                    <h4>
+                        ${post.date}
+                    </h4>
+                    <h4>
+                        ${post.hebrewDate}
+                    </h4>
+                </div>
+                <h1>${post.title}</h1>
+            </div>
+        `
         post.content.forEach(paragraph => {
             if (paragraph.includes('images/')) {
                 let html = `<img src=${paragraph} />`
