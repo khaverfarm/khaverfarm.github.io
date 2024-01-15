@@ -1,4 +1,3 @@
-const posts = data.reverse()
 const imgDir = 'images/'
 const containsHebrew = /[\u0590-\u05FF]/
 const newLine = /\r?\n/
@@ -6,7 +5,7 @@ const newLine = /\r?\n/
 async function populateSidebar() {
     try {
         let sidebarHtml = ""
-        posts.forEach(post => {
+        postData.forEach(post => {
             sidebarHtml += `<li onclick="populateFullPost(${post.id})">${post.title} - ${post.date}</li>`
         })
         document.getElementById("sidebar").innerHTML = sidebarHtml
@@ -19,7 +18,7 @@ async function populateSidebar() {
 async function populateFullPost(id) {
     try {
         // render most recent post by default
-        let post = (id == undefined) ? posts[0] : posts[posts.length - id]  
+        let post = (id == undefined) ? postData[postData.length - 1] : postData.filter(post => post.id == id)[0]
         // TITLE BLOCK
         let postHtml = `
             <div>

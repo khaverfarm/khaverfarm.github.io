@@ -22,7 +22,7 @@ class Header extends HTMLElement {
 class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <footer class="flex" style="justify-content: space-around;">
+            <footer class="flex">
                 <p>50 Campbell Rd Plainfield, MA 01070</p>
                 <p>781-507-4860</p>
                 <p>khaverfarm@gmail.com</p>

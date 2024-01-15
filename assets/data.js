@@ -1,4 +1,4 @@
-const data = [
+const postData = [
    {
         "id": 1,
         "title": "For the Trees",

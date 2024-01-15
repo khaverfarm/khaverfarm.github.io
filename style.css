@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
 	font-family: 'Computer Modern Classical Serif Upright Italic';
 	src: url('./fonts/cmunti.ttf') format('truetype');
@@ -23,22 +24,7 @@
 	src: url('./fonts/cmunci.ttf') format('truetype');
 }
 
-body {
-	margin: 0px;
-	padding: 0px;
-}
-
-.flex {
-    display: flex;
-  }
-
-nav {
-    background-color: maroon;
-    color: white;
-    padding: 30px;
-	font-family: 'Computer Modern Classical Serif Italic';
-}
-
+/* TAG STYLES */
 a {
 	text-decoration:none;
 	color: white;
@@ -48,12 +34,65 @@ a:hover{
 	color: papayawhip;
 }
 
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+footer {
+	font-family: 'Computer Modern Classical Sans Serif Medium';
+	background-color: maroon;
+	color: white;
+	justify-content: space-around;
+}
+
+li {
+	padding: 3%;
+}
+
+li:hover{
+	cursor: pointer;
+	color: maroon;
+}
+
+nav {
+    background-color: maroon;
+    color: white;
+    padding: 30px;
+	font-family: 'Computer Modern Classical Serif Italic';
+}
+
+
+/* CLASS STYLES */
+.flex {
+    display: flex;
+}
+
+.hebrew {
+	text-align: right;
+	font-size: 20px;
+}
+
+.home {
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.postcontainer {
+	padding: 3%;
+}
+
 .popquote {
-	padding: 150px;
+	padding: 15%;
 	text-align: center;
 	background-color: papayawhip;
 	font-size: 35px;
 	font-family: 'Computer Modern Classical Serif Bold Italic';
+}
+
+.postcontainer {
+	justify-content: space-evenly;
+	padding: 3%;
 }
 
 .posts {
@@ -62,6 +101,11 @@ a:hover{
 	background-color: white;
 	font-size: 35px;
 	font-family: 'Computer Modern Classical Serif Bold Italic';
+}
+
+.post-title {
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .welcome {
@@ -81,37 +125,17 @@ a:hover{
 	padding-right: 45px;
 }
 
+.welcomeimage {
+	flex-grow: 1;
+}
+
 .welcometext {
 	padding-bottom: 20px;
 	font-family: Computer Modern Classical Serif Italic;
 	font-size: 25px;
 }
 
-.welcomeimage {
-	flex-grow: 1;
-}
-
-@media only screen and (max-width : 600px) {
-	.navbar {
-		color: green;
-	}
-}
-
-footer {
-	font-family: 'Computer Modern Classical Sans Serif Medium';
-	background-color: maroon;
-	color: white;
-}
-
-li:hover{
-	cursor: pointer;
-	color: maroon;
-}
-
-.postcontainer {
-	justify-content: space-evenly;
-	padding: 3%;
-}
+/* ID STYLES */
 
 #sidebar {
 	flex-direction: column;
@@ -131,24 +155,37 @@ li:hover{
 	flex-direction: column;
 }
 
-li {
-	padding: 3%;
-}
+/* MOBILE STYLES*/
+@media only screen and (max-width : 600px) {
+	/* TAG STYLES */
+	footer {
+		flex-direction: column;
+		text-align: center;
+		margin-top: 10%;
+	}
+	
+	/* CLASS STYLES */
+	.popquote {
+		padding: 10%;
+	}
+	.popquote-top {
+		padding-bottom: 10%;
+	}
+	.post-container {
+		flex-direction: column;
+	}
+	.welcome {
+		padding: 0%;
+		text-align: center;
+		flex-direction: column;
+	}
+	.welcomebox {
+		padding: 3%;
+	}
 
-.postcontainer {
-	padding: 3%;
-}
-
-.post-title {
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.home {
-	flex-direction: column;
-	align-items: stretch;
-}
-
-.hebrew {
-	text-align: right;
+	/* ID STYLES */
+	#sidebar {
+		padding: 10%;
+		list-style-type: hebrew;
+	}
 }
