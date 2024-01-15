@@ -146,6 +146,7 @@ nav {
 	font-family: 'Computer Modern Classical Sans Serif Medium';
 	font-size: 17px;
 	background-color: papayawhip;
+	list-style-type: hebrew;
 }
 
 #post {
@@ -186,6 +187,5 @@ nav {
 	/* ID STYLES */
 	#sidebar {
 		padding: 10%;
-		list-style-type: hebrew;
 	}
 }
