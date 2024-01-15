@@ -1,12 +1,31 @@
 @font-face {
+	font-family: 'Computer Modern Classical Serif Upright Italic';
+	src: url('./fonts/cmunti.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Computer Modern Classical Serif Bold Italic';
+	src: url('./fonts/cmunbi.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Computer Modern Classical Serif Roman';
+	src: url('./fonts/cmunrm.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Computer Modern Classical Sans Serif Medium';
+	src: url('./fonts/cmunss.ttf') format('truetype');
+}
+
+@font-face {
 	font-family: 'Computer Modern Classical Serif Italic';
-	src: url('./fonts/cmunci.eot');
-	src: url('./fonts/cmunci.eot?#iefix') format('embedded-opentype'),
-		 url('./fonts/cmunci.woff') format('woff'),
-		 url('./fonts/cmunci.ttf') format('truetype'),
-		 url('./fonts/cmunci.svg#cmunci') format('svg');
-	font-weight: normal;
-	font-style: italic;
+	src: url('./fonts/cmunci.ttf') format('truetype');
+}
+
+.body {
+	margin: 0px;
+	padding: 0px;
 }
 
 .flex {
@@ -14,21 +33,51 @@
   }
 
 .navbar {
-    background-color: teal;
+    background-color: maroon;
     color: white;
     padding: 30px;
-    font-family: 'Computer Modern Classical Serif Italic';
-}
-
-.body {
-  padding: 30px;
+	font-family: 'Computer Modern Classical Serif Italic';
 }
 
 a{
 	text-decoration:none;
-  color: white;
+	color: white;
 }
 
 a:hover{
 	color: papayawhip;
+}
+
+.popquote {
+	padding: 150px;
+	text-align: center;
+	background-color: papayawhip;
+	font-size: 35px;
+	font-family: 'Computer Modern Classical Serif Bold Italic';
+}
+
+.welcome {
+	padding-top: 50px;
+	padding-right: 150px;
+	padding-bottom: 50px;
+	padding-left: 150px;
+	text-align: left;
+	background-color: white;
+	font-size: 20px;
+	font-family: 'Computer Modern Classical Serif Roman';
+}
+
+.welcometext {
+	flex-grow: 1;
+	padding-right: 45px;
+}
+
+.welcomeimage {
+	flex-grow: 1;
+}
+
+@media only screen and (max-width : 600px) {
+	.navbar {
+		color: green;
+	}
 }

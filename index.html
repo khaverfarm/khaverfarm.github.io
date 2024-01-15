@@ -8,15 +8,10 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="flex navbar">
+    <div class="flex navbar" style="margin: 1px solid yellow";>
         <div class="flex" style="flex-grow: 1; justify-content: space-evenly; align-items: center;">
             <div class="flex" style="flex-grow: 6; font-size: 50px">
                 Khaver Farm
-            </div>
-            <div class="flex" style="flex-grow: 1; font-size: 25px">
-                <a href="./about.html">
-                    About
-                </a>
             </div>
             <div class="flex" style="flex-grow: 1; font-size: 25px;">
                 <a href="./posts.html">
@@ -25,12 +20,32 @@
             </div>
         </div>
     </div>
-    <div class="flex home" style="flex-direction: column; align-items: center; border: 1px solid red">
-        <div style="border: 1px solid green;">
-            Locally-grown nuts and kosher meat.
+    <div class="flex home" style="flex-direction: column; align-items: stretch">
+        <div class="popquote">
+            <div>
+                Locally grown Nuts
+            </div>
+            <div>
+                Kosher Meat
+            </div>
         </div>
-        <div>
-            Lorem ipsum about about about.
+        <div class="flex welcome" style="justify-content: space-between;">
+            <div class="welcometext">
+                <p style="padding-bottom: 20px; font-family: Computer Modern Classical Serif Italic; font-size: 25px;">
+                    Welcome to Khaver Farm!
+                </p>
+                <p>
+                    We are a regenerative hazelnut, chestnut and silvopastured meat operation specializing in kosherly raised lamb and geese in the hilltowns of western Massachusetts.
+                </p>
+                <p>
+                    Co-founded by first generation farmers Jessica Marshall and Yonatan Katzelnik, we aim to combine climate-resilient agroforestry practices with the wisdom of our diasporic Jewish cultures.
+                    Our animals will be raised throughout our hazelnut and chestnut hedgerows, grazing on nutritious perennial pasture while managing pests and fertilizing the trees. 
+                </p>    
+                <p>    
+                    We will be offering organically and kosherly raised poultry and lamb for high-holiday preorder starting soon!             
+                </p>
+            </div>
+            <img class="welcomeimage" src="./images/farmers.jpg" />
         </div>
     </div>
   </body>
