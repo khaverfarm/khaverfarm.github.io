@@ -2,7 +2,7 @@ async function populateSidebar() {
     try {
         let result = ""
         posts.forEach(post => {
-            result += `<li>${post.title}</li>`
+            result += `<li onclick="populateFullPost(${post.id})">${post.title}</li>`
         })
         document.getElementById("sidebar").innerHTML = result 
         
@@ -15,11 +15,11 @@ async function populateFullPost(id) {
     try {
         let post
         if (id == undefined) {
+            // render most recent post by default
             post = posts[posts.length - 1]
         } else {
-            post = posts[id]
+            post = posts[id-1]
         }
-        console.log(post.title)
         let title = post.title
         let date = post.date
         let hebrewDate = post.hebrewDate

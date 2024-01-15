@@ -39,7 +39,7 @@ nav {
 	font-family: 'Computer Modern Classical Serif Italic';
 }
 
-a{
+a {
 	text-decoration:none;
 	color: white;
 }
@@ -94,4 +94,9 @@ footer {
 	font-family: 'Computer Modern Classical Sans Serif Medium';
 	background-color: maroon;
 	color: white;
+}
+
+li:hover{
+	cursor: pointer;
+	color: maroon;
 }
