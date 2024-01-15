@@ -4,12 +4,12 @@ class Header extends HTMLElement {
             <nav class="flex" style="margin: 1px solid yellow";>
                 <div class="flex" style="flex-grow: 1; justify-content: space-evenly; align-items: center;">
                     <div class="flex" style="flex-grow: 6; font-size: 50px">
-                        <a href="./index.html">
+                        <a class="navtext" href="./index.html">
                             Khaver Farm
                         </a>
                     </div>
                     <div class="flex" style="flex-grow: 1; font-size: 25px;">
-                        <a href="./posts.html">
+                        <a class="navtext" href="./posts.html">
                             Posts
                         </a>
                     </div>
