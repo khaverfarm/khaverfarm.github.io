@@ -1,18 +1,16 @@
 class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <nav class="flex" style="margin: 1px solid yellow";>
-                <div class="flex" style="flex-grow: 1; justify-content: space-evenly; align-items: center;">
-                    <div class="flex" style="flex-grow: 6; font-size: 50px">
-                        <a class="navtext" href="./index.html">
-                            Khaver Farm
-                        </a>
-                    </div>
-                    <div class="flex" style="flex-grow: 1; font-size: 25px;">
-                        <a class="navtext" href="./posts.html">
-                            Posts
-                        </a>
-                    </div>
+            <nav class="flex";>
+                <div class="logo flex">
+                    <a class="navtext" href="./index.html">
+                        Khaver Farm
+                    </a>
+                </div>
+                <div class="navbar-element flex">
+                    <a class="navtext" href="./posts.html">
+                        Posts
+                    </a>
                 </div>
             </nav>
         `;
